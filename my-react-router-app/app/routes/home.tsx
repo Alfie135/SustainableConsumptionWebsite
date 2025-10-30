@@ -1,6 +1,8 @@
 import Counter from "../components/Counter/counter";
 import type { Route } from "./+types/home";
 import Server from "~/components/server";
+import "./home.css"
+import NavBar from "~/components/NavBar/NavBar";
 
 export function meta({ }: Route.MetaArgs) {
   return [
@@ -10,8 +12,11 @@ export function meta({ }: Route.MetaArgs) {
 }
 
 export default function Home() {
-  return <div>
-    <Counter />
-    <Server />
-  </div>;
+  return (
+    <div className="mainview">
+      <NavBar></NavBar>
+      <Counter/>
+      <Server/>
+    </div>)
 }
+
