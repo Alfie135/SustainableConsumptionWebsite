@@ -3,6 +3,7 @@ import TextBox from "../TextBox/textbox";
 interface ContainerProps {
     title: string;
     description: string;
+    
 }
 
 export default function Container(props: ContainerProps) {
