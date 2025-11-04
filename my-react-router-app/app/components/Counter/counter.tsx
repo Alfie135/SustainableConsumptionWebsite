@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { getCounter, postCounter } from '~/helpers/requests';
+import './counter.css';
 
 export default function Counter() {
     const [counter, setCounter] = useState<number>(0);
@@ -19,23 +20,9 @@ export default function Counter() {
     }
 
     return (
-        <div
-            style={{
-                display: 'flex',
-                flexDirection: 'column',
-                alignItems: 'center',
-                justifyContent: 'center',
-                height: '100vh',
-            }}>
+        <div className="flexbox">
             <p>{counter}</p>
-            <button
-                style={{
-                    backgroundColor: 'grey',
-                    borderRadius: 5,
-                    color: 'white',
-                    paddingLeft: 4,
-                    paddingRight: 4,
-                }}
+            <button className="button"
                 onClick={onClick}
             >
                 Add one
