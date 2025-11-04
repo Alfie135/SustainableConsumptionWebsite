@@ -2,6 +2,8 @@ import express from "express";
 import cors from "cors";
 import bodyParser from "body-parser";
 
+let counter = 0;
+
 // create express app & choose port
 const app = express();
 const port = 3000;
@@ -16,9 +18,18 @@ app.use(cors(corsOptions));
 app.use(bodyParser.json()); // parse json requests
 app.use(bodyParser.urlencoded({ extended: false })); // parse url encoded requests
 
+app.get('/counter', (req, res) => {
+  res.send({ counter: counter })
+})
+
 // hello world response
 app.get('/', (req, res) => {
-  res.send({ message: 'Hello World!' })
+  res.send({ message: 'Hello world' })
+})
+
+app.post('/counter', (req, res) => {
+  console.log(req.body);
+  res.send({ message: "Method not yet implemented" });
 })
 
 // start server
