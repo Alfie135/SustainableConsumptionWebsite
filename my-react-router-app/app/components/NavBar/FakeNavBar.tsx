@@ -1,13 +1,12 @@
 import './NavBar.css';
+import test from 'public/GrassField.jpg';
 
 export default function FakeNavBar() {
     return (
         <div className="FakeNavBar">
-            <img
-              className="FakeNavBar_image"
-              src="C:\Users\2402944\Pictures\aaaaaa.jpg"/* or "https://via.placeholder.com/1600x120" */
-            />
-            <h1>What is Responsible Consumption?</h1>
+            <img className="FakeNavBar_image" src={test} alt="Test image" />
+            <div className="FakeNavBar_content"> <h1>What is Responsible Consumption?</h1>
+            </div>
         </div>
     );
 }
