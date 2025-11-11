@@ -1,9 +1,7 @@
 .NavBarMain {
     position: relative;
     background-color: rgb(255, 255, 255);
-    height: 360px;
     width: 100%;
-    background-image: url('public/GrassField.jpg');
     background-size: cover;
     text-align: center;
     display: flex;
@@ -47,16 +45,6 @@
     padding: 32px;
     width: 100%;
     box-sizing: border-box;
-}
-
-.NavBar2 {
-    position: relative;
-    background-color: rgb(255, 255, 255);
-    height: 180px;
-    width: 100%;
-    background-image: url('public/LandFill.jpg');
-    background-size: cover;
-    padding-bottom: 10px;
 }
 
 

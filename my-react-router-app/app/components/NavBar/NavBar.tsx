@@ -2,17 +2,22 @@ import './NavBar.css';
 import TextBox from '~/components/TextBox/textbox';
 
 interface NavBarProps {
-    TitleText?: string;
+    TitleText: string;
     SubTitleText?: string;
     FloatingText?: string;
-    className?: string;
     TextBoxText?: string;
+    ImageHeight: number;
+    BackgroundPhoto: string;
 }
 
 export default function NavBar(props: NavBarProps) {
-        const { FloatingText, TitleText, SubTitleText, className, TextBoxText } = props;
+        const { FloatingText, TitleText, SubTitleText, TextBoxText, ImageHeight, BackgroundPhoto } = props;
+        const style = {
+            height: ImageHeight + 'px',
+            backgroundImage: `url(${BackgroundPhoto})`,
+        }
     return (
-        <div className={`NavBarMain ${className ?? ""}`}>
+        <div className={"NavBarMain"} style={style}>
 
             {TitleText ? <div><h2 className="TitleText InfrontOfImage boxBackground">{TitleText}</h2></div> :<></>}
             {SubTitleText ? <h2 className="subTitleText InfrontOfImage">{SubTitleText}</h2>:<></>}
