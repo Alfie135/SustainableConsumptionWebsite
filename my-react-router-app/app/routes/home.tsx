@@ -4,7 +4,6 @@ import Server from "~/components/server";
 import "./home.css"
 import TextBox from "~/components/TextBox/textbox";
 import NavBar from "~/components/NavBar/NavBar";
-import FakeNavBar from "~/components/NavBar/FakeNavBar";
 import Container from "~/components/Container/container";
 
 export function meta({ }: Route.MetaArgs) {
@@ -17,18 +16,19 @@ export function meta({ }: Route.MetaArgs) {
 export default function Home() {
   return (
     <div className="mainview">
-      <NavBar/>
+      <NavBar className="NavBarMain" TitleText="What is responsible consumption?" SubTitleText="Ways you can be more eco friendly:"FloatingText="What is responsible consumption?" TextBoxText="Responsible Consumption definition"/>
       <div className="textboxRow">
-        <Container title="Title1" description="Description1" />
-        <Container title="Title2" description="Description2" />
-        <Container title="Title3" description="Description3" />
-        <Container title="Title4" description="Description4" />
-        <Container title="Title5" description="Description5" />
-        <Container title="Title6" description="Description6" />
-        <Container title="Title7" description="Description7" />
-        <Container title="Title8" description="Description8" />
-        <Container title="Title9" description="Description9" />
-        <Container title="Title10" description="Description10" />
+        <Container title="Buying from sustainable sources" description="Purchasing Sustainably" />
+        <Container title="Purchasing food about to be wasted" description="Apps like TGTG, Olio" />
+        <Container title="Reducing your use of single use plastic" description="Explanation of examples" />
+      </div>
+      <div className="NavBar2">
+        <NavBar className="NavBar2" TitleText="What benefits does having responsible consumption have?"/>
+      </div>
+      <div className="textboxRow">
+        <Container title="Benefits of purchasing sustainably" description="Explanation (more investment in sustainable practices of food production due to increased demand etc)" />
+        <Container title="Apps benefit to you, businesseses & environment" description="Why these apps are good, how they help you, businesses & environment" />
+        <Container title="Benefits of reducing single use plastic" description="Environmental benefits, production benefits (recycleable plastic etc)" />
       </div>
     </div>
   );
