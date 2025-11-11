@@ -2,7 +2,13 @@
     flex: 1;
     justify-content: center;
     align-items: center;
-    background-image: url('public/FruitMarket.jpg'); 
+    background-image: url('http://localhost:3000/FruitMarket.jpg'); 
     background-size: cover;
     background-color: darkgreen;
   }
+
+.LanguageButton {
+  position: absolute;
+  background-color: turquoise;
+  z-index: 1;
+}

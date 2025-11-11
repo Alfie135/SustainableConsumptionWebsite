@@ -1,8 +1,7 @@
 import express from "express";
 import cors from "cors";
 import bodyParser from "body-parser";
-
-let counter = 0;
+import { EnglishText, SpanishText } from "./helpers/text";
 
 // create express app & choose port
 const app = express();
@@ -18,19 +17,13 @@ app.use(cors(corsOptions));
 app.use(bodyParser.json()); // parse json requests
 app.use(bodyParser.urlencoded({ extended: false })); // parse url encoded requests
 
-app.get('/counter', (req, res) => {
-  res.send({ counter: counter })
+app.use(express.static("Assets")); // serve static files from Assets folder
+
+app.get ("/Text", (req, res) => {
+  res.send(EnglishText);
 })
 
-// hello world response
-app.get('/', (req, res) => {
-  res.send({ message: 'Hello world' })
-})
 
-app.post('/counter', (req, res) => {
-  counter = req.body.counter;
-  res.send({ message: "Method not yet implemented" });
-})
 
 // start server
 app.listen(port, () => {
