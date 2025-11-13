@@ -19,7 +19,13 @@ app.use(bodyParser.urlencoded({ extended: false })); // parse url encoded reques
 
 app.use(express.static("Assets")); // serve static files from Assets folder
 
-app.get ("/Text", (req, res) => {
+app.get ("/Text", (req, res) => { 
+  if (!req.query.language){
+    res.send(EnglishText);
+  }
+  if (req.query.language === 'Español'){
+    res.send(SpanishText);
+  }
   res.send(EnglishText);
 })
 
