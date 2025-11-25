@@ -6,7 +6,7 @@ import Container from "~/components/Container/container";
 import { useEffect, useState } from "react";
 import { getText } from "~/helpers/requests";
 
-export function meta({ }: Route.MetaArgs) {
+export function meta({ }: Route.MetaArgs) { // Meta information for the home route
   return [
     { title: "New React Router App" },
     { name: "description", content: "Welcome to React Router!" },
@@ -58,7 +58,7 @@ const defaultTextData: TextData = {
   Row2Text3Description: "",
 };
 
-export default function Home() {
+export default function Home() { // Home route component
   const [Text, setText] = useState<TextData>(defaultTextData);
   useEffect(() => {
     async function fetchData() {
@@ -69,7 +69,7 @@ export default function Home() {
     fetchData();
   }, []);
 
-  return (
+  return ( // Main view of the home route
     <div className="mainview">
       <button className="LanguageButton">English</button>
       <button style={{ top: 25 }} className="LanguageButton">Español</button>

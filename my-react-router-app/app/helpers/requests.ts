@@ -1,4 +1,4 @@
-export async function getText(reqLanguage?:string) {
+export async function getText(reqLanguage?:string) { // Fetch text data from the server
   const params = new URLSearchParams({ language: reqLanguage || ""});
   const url = `http://localhost:3000/Text?${params}`;
   try {

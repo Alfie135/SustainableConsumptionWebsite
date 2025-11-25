@@ -1,7 +1,7 @@
 import './NavBar.css';
 import TextBox from '~/components/TextBox/textbox';
 
-interface NavBarProps {
+interface NavBarProps { // Props for the NavBar component
     TitleText: string;
     SubTitleText?: string;
     FloatingText?: string;
@@ -10,7 +10,7 @@ interface NavBarProps {
     BackgroundPhoto: string;
 }
 
-export default function NavBar(props: NavBarProps) {
+export default function NavBar(props: NavBarProps) { // NavBar component
         const { FloatingText, TitleText, SubTitleText, TextBoxText, ImageHeight, BackgroundPhoto } = props;
         const style = {
             height: ImageHeight + 'px',

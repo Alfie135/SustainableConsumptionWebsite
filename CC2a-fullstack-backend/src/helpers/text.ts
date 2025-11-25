@@ -21,7 +21,7 @@ const EnglishText = {
     Row2Text3Description: "Environmental benefits, production benefits (recycleable plastic etc)",
 }
 
-const SpanishText = {
+const SpanishText = { //Descriptions will be changed and are not important if not correct
     MainTitle: "¿Qué es el consumo responsable?",
     SubTitleText: "Formas en que puedes ser más ecológico:",
     SubSubTitleText: "Definición de consumo responsable:",
@@ -31,17 +31,17 @@ const SpanishText = {
     Row1Text1Description: "Compras sostenibles",
     Row1Text2Title:"Apps recomendadas para no desperdiciar comida",
     Row1Text2Description: "Apps como 'Wallapop' y 'Too good to go'",
-    Row1Text3Title: "Redduce tu uso de plástico de un solo uso",
+    Row1Text3Title: "Reducir tu uso de plástico de un solo uso",
     Row1Text3Description: "Explicación de ejemplos a aprender",
 
-    Row2Title: "",
+    Row2Title: "Qué beneficios hace tener consumo de responsable tener?",
 
-    Row2Text1Title: "",
-    Row2Text1Description: "",
-    Row2Text2Title: "",
-    Row2Text2Description: "",
-    Row2Text3Title: "",
-    Row2Text3Description: "",
+    Row2Text1Title: "Beneficios si comprando sostenible",
+    Row2Text1Description: "Explicación",
+    Row2Text2Title: "La apps beneficios a tú, negocio y ecológico",
+    Row2Text2Description: "Por qué estas apps son buenas, cómo ellas ayudar tú, negocio y ecológico. ",
+    Row2Text3Title: "Beneficios si reducir tu plástico de un solo uso",
+    Row2Text3Description: "Beneficios de la ecológico, beneficios de la producción.",
 
 }
 

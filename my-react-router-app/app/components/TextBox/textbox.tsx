@@ -1,15 +1,15 @@
 import './textbox.css';
 
-type Props = React.PropsWithChildren<{
+type Props = React.PropsWithChildren<{ // Props for the TextBox component
   className?: string;
 //   left?: number;
 //   top?: number | string;
   backgroundColor?: string;
 }>;
 
-export default function TextBox(props : Props) {
+export default function TextBox(props : Props) { // TextBox component
 
-    const {className, backgroundColor, children} =  props;
+    const {className, backgroundColor, children} =  props; 
     // const {className, left, top, backgroundColor, children} =  props;
 
      const style: React.CSSProperties = {

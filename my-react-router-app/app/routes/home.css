@@ -1,4 +1,4 @@
-.mainview {
+.mainview { /* Main view styling */
     flex: 1;
     justify-content: center;
     align-items: center;
@@ -7,7 +7,7 @@
     background-color: darkgreen;
   }
 
-.LanguageButton {
+.LanguageButton { /* Language button styling */
   position: absolute;
   background-color: turquoise;
   z-index: 1;
