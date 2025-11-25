@@ -1,11 +1,11 @@
 .LanguageButton { /* Language button styling */
   background-color: turquoise;
 }
-.LanguageButton:hover {
+.LanguageButton:hover { /* Language button hover effect colour */
   background-color: #40E0D0;
 }
 
-.LanguageButtonContainer{
+.LanguageButtonContainer{ /* Language button container styling */
   position: absolute;
   z-index: 2;
 

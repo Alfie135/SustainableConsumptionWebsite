@@ -7,10 +7,10 @@ interface ContainerProps { // Props for the Container component
 
 export default function Container(props: ContainerProps) { // Container component
 
-    const {title, description} = props;
+    const {title, description} = props; 
 
-    return <div className="textboxColumn">
-        <TextBox className="textBoxTitle">{title}</TextBox>
+    return <div className="textboxColumn"> 
+        <TextBox className="textBoxTitle">{title}</TextBox> 
         <TextBox>{description}</TextBox>
     </div>
 

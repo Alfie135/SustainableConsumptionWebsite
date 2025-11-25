@@ -10,13 +10,22 @@ npm install
 ### Development
 
 - You must start a development server for both the front and back end.
-- Start the development server with HMR:
+
+#### Front end
 
 ```bash
 npm run dev
 ```
 
 Your application will be available at `http://localhost:5173`.
+
+#### Back end
+
+```bash
+npm run dev
+```
+
+Your application will be available at `http://localhost:3000`.
 
 ## Information if you want to further develop the application
 #### Folder structure: 

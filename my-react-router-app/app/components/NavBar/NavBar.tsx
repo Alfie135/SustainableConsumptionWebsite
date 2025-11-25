@@ -11,15 +11,16 @@ interface NavBarProps { // Props for the NavBar component
 }
 
 export default function NavBar(props: NavBarProps) { // NavBar component
-        const { FloatingText, TitleText, SubTitleText, TextBoxText, ImageHeight, BackgroundPhoto } = props;
-        const style = {
+        const { FloatingText, TitleText, SubTitleText, TextBoxText, ImageHeight, BackgroundPhoto } = props; 
+        const style = { // Style for NavBar background image and height
             height: ImageHeight + 'px',
             backgroundImage: `url(${BackgroundPhoto})`,
         }
     return (
-        <div className={"NavBarMain"} style={style}>
+        // Render NavBar with optional texts and background image
+        <div className={"NavBarMain"} style={style}> 
 
-            {TitleText ? <div><h2 className="TitleText InfrontOfImage boxBackground">{TitleText}</h2></div> :<></>}
+            {TitleText ? <div><h2 className="TitleText InfrontOfImage boxBackground">{TitleText}</h2></div> :<></>} 
             {SubTitleText ? <h2 className="subTitleText InfrontOfImage">{SubTitleText}</h2>:<></>}
 
             {FloatingText ? <div className="NavBar_content InfrontOfImage"> <h1>{FloatingText}</h1></div> :<></>}
