@@ -14,5 +14,5 @@ export default function LanguageButton (props:LanguageButtonProps){
           const ServerText = await getText(language);
           setText(ServerText);
         }
-    return <Button onClick={fetchData} className="LanguageButton" style={{top:top}}>{language}</Button>
+    return <div className="LanguageButtonContainer" style={{top:top}}><Button onClick={fetchData} className="LanguageButton">{language}</Button></div>
 }

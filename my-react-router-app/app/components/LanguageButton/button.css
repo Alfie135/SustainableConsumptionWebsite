@@ -1,8 +1,12 @@
 .LanguageButton { /* Language button styling */
-  position: absolute;
   background-color: turquoise;
-  z-index: 1;
 }
 .LanguageButton:hover {
   background-color: #40E0D0;
+}
+
+.LanguageButtonContainer{
+  position: absolute;
+  z-index: 2;
+
 }
