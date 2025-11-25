@@ -2,12 +2,12 @@ export async function getText(reqLanguage?:string) { // Fetch text data from the
   const params = new URLSearchParams({ language: reqLanguage || ""});
   const url = `http://localhost:3000/Text?${params}`;
   try {
-    const response = await fetch(url);
+    const response = await fetch(url); // Make the HTTP request
     if (!response.ok) {
       throw new Error(`Response status: ${response.status}`);
     }
 
-    const result = await response.json();
+    const result = await response.json(); // Parse JSON response
     return result;
   } catch (error: any) {
     if (error && error.message)

@@ -1,12 +1,11 @@
 import TextBox from "../TextBox/textbox";
 
-interface ContainerProps {
+interface ContainerProps { // Props for the Container component
     title: string;
-    description: string;
-    
+    description: string; 
 }
 
-export default function Container(props: ContainerProps) {
+export default function Container(props: ContainerProps) { // Container component
 
     const {title, description} = props;
 

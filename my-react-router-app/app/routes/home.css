@@ -6,9 +6,3 @@
     background-size: cover;
     background-color: darkgreen;
   }
-
-.LanguageButton { /* Language button styling */
-  position: absolute;
-  background-color: turquoise;
-  z-index: 1;
-}

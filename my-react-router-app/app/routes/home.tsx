@@ -5,6 +5,8 @@ import NavBar from "~/components/NavBar/NavBar";
 import Container from "~/components/Container/container";
 import { useEffect, useState } from "react";
 import { getText } from "~/helpers/requests";
+import LanguageButton from "~/components/LanguageButton/button"
+import { Button } from "antd";
 
 export function meta({ }: Route.MetaArgs) { // Meta information for the home route
   return [
@@ -13,7 +15,7 @@ export function meta({ }: Route.MetaArgs) { // Meta information for the home rou
   ];
 }
 
-interface TextData {
+interface TextData { // Structure of text data fetched from the server
   MainTitle: string; 
   SubTitleText: string;
   SubSubTitleText: string;
@@ -35,7 +37,7 @@ interface TextData {
   Row2Text3Title: string;
   Row2Text3Description: string;
 }
-const defaultTextData: TextData = {
+const defaultTextData: TextData = { // Default text data structure
   MainTitle: "",
   SubTitleText: "",
   SubSubTitleText: "",
@@ -60,19 +62,29 @@ const defaultTextData: TextData = {
 
 export default function Home() { // Home route component
   const [Text, setText] = useState<TextData>(defaultTextData);
-  useEffect(() => {
-    async function fetchData() {
-      const ServerText = await getText();
+  async function fetchData(reqLanguage?:string) {
+      const ServerText = await getText(reqLanguage);
       setText(ServerText);
     }
-
+  useEffect(() => {
     fetchData();
   }, []);
 
+  // function onClickEnglish (){
+  //   fetchData();
+  // }
+  // function onClickSpanish (){
+  //   fetchData("Español");
+  // }
+
   return ( // Main view of the home route
     <div className="mainview">
-      <button className="LanguageButton">English</button>
-      <button style={{ top: 25 }} className="LanguageButton">Español</button>
+      <LanguageButton top={0} language={"English"} setText={setText}></LanguageButton>
+      <LanguageButton top={33} language={"Español"} setText={setText}></LanguageButton>
+
+
+      {/* <button onClick={onClickEnglish} className="LanguageButton">English</button>
+      <button onClick={onClickSpanish} style={{ top: 25 }} className="LanguageButton">Español</button> */}
       <NavBar
         TitleText={Text.MainTitle}
         SubTitleText={Text.SubTitleText}
@@ -93,7 +105,7 @@ export default function Home() { // Home route component
           BackgroundPhoto="http://localhost:3000/Landfill.jpg" />
       </div>
       <div className="textboxRow">
-        <Container title={Text.Row2Text1Title} description={Text.Row2Text2Description} />
+        <Container title={Text.Row2Text1Title} description={Text.Row2Text1Description} />
         <Container title={Text.Row2Text2Title} description={Text.Row2Text2Description} />
         <Container title={Text.Row2Text3Title} description={Text.Row2Text3Description} />
       </div>
